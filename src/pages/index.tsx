@@ -1,32 +1,22 @@
-import { useState, useEffect } from 'react';
-import { Company } from './api/types';
+import React from "react";
+import List from "@/components/List";
+import styles from "../styles/myglobalstyles.module.css";
 
-const Companies = () => {
-  const [companies, setCompanies] = useState<Company[]>([]);
 
-  useEffect(() => {
-    const fetchCompanies = async () => {
-      try {
-        const response = await fetch('https://jhayrftpnew.bsite.net/api/companies');
-        const data = await response.json();
-        setCompanies(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchCompanies();
-  }, []);
-
+const AddProduct: React.FC = () => {
   return (
-    <div>
-      <h1>Companies</h1>
-      <ul>
-        {companies.map((company) => (
-          <li key={company.id}>{company.name}</li>
-        ))}
-      </ul>
-    </div>
+    <main className={styles.main}>
+      
+      <section className=" w-full flex flex-col justify-center items-center gap-5">
+      <h1 className=" font-bold text-2xl">List of Companies</h1>
+      <List />
+
+
+      </section>
+      
+     
+    </main>
   );
 };
 
-export default Companies;
+export default AddProduct;
