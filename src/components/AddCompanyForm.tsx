@@ -10,10 +10,6 @@ const AddCompanyForm: React.FC<AddCompanyFormProps> = () => {
   const [address, setAddress] = useState<string>("");
   const [contactInfo, setContactInfo] = useState<string>("");
   const [description, setDescription] = useState<string>("");
-  // const [newProductPrice, setNewProductPrice] = useState<number | undefined>(
-  //   undefined
-  // );
-
   const [addCompany] = useAddCompanyMutation();
 
   const d = new Date();
@@ -83,20 +79,13 @@ const AddCompanyForm: React.FC<AddCompanyFormProps> = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            {/* <Input
-              type="text"
-              size="lg"
-              label="Price"
-              value={newProductPrice ?? ""}
-              onChange={(e) => setNewProductPrice(parseInt(e.target.value))}
-            /> */}
           </div>
 
           <Button type="submit" className="mt-6" fullWidth>
             Add New Company
           </Button>
           <br></br>
-          <Link href={"/company/list"}>
+          <Link href={"/"}>
             <button className=" h-[40px] w-full text-blue-gray-50 bg-green-400 rounded-lg">
               View Company List
             </button>

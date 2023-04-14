@@ -7,12 +7,12 @@ const AddProduct: React.FC = () => {
   return (
     <main className={styles.main}>
       
-      <section className=" w-full flex flex-col justify-center items-center gap-5">
-      <h1 className=" font-bold text-2xl">List of Companies</h1>
+     
+      <h1 className=" font-bold text-2xl text-center">List of Companies</h1>
       <List />
 
 
-      </section>
+      
       
      
     </main>

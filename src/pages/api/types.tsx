@@ -1,15 +1,3 @@
-export interface Product {
-  id: number;
-  name: string;
-  generic: string;
-  price: number;
-}
-
-export interface ProductList {
-  id: number;
-  name: string;
-  price: number;
-}
 
 export interface Company {
   id: number;
